@@ -45,7 +45,7 @@ app.get("/", (req, res) => {
 app.use(cors({
   origin: 'https://twiitter-clone.vercel.app', // Replace with your Vercel frontend URL
   credentials: true, // Allow cookies and other credentials
-}));
+}));     
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
