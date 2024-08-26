@@ -10,6 +10,7 @@ import postRoutes from "./routes/post.route.js";
 import notificationRoutes from "./routes/notification.route.js";
 
 import connectMongoDB from "./db/connectMongoDB.js";
+import cors from 'cors';
 
 dotenv.config();
 
@@ -40,6 +41,11 @@ app.get("/", (req, res) => {
 // app.get('*', (req, res) => {
 //   res.sendFile(path.resolve(__dirname, 'frontend', 'dist', 'index.html'));
 // });
+
+app.use(cors({
+  origin: 'https://twiitter-clone.vercel.app', // Replace with your Vercel frontend URL
+  credentials: true, // Allow cookies and other credentials
+}));
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
