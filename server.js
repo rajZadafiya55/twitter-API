@@ -44,7 +44,7 @@ app.get("/", (req, res) => {
 
 app.use(cors({
   origin: 'https://twiitter-clone.vercel.app', // Replace with your Vercel frontend URL
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],  
   credentials: true, // Allow cookies and other credentials
 }));     
 
